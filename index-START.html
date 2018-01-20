@@ -33,6 +33,17 @@
         return true
       }
     });
+
+    console.log(isAdult);
+
+    // refactored with arrow function
+      const isAdult = people.some(adult => {
+      const currentYear = (new Date()).getFullYear();
+      return currentYear - adult.year >= 19
+    });
+
+    console.log(isAdult);
+
     // Array.prototype.every() // is everyone 19 or older?
 
     // Array.prototype.find()
